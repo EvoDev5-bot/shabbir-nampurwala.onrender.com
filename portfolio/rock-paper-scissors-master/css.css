@@ -1,0 +1,456 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%) );
+    min-height: 100vh;
+    width:100vw;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom:100px;
+    display:flex;
+    justify-content:center;
+    color:white;
+    font-family: Barlow Semi condensed;
+}
+
+main{
+    height: auto;
+    width:700px;
+    background-color: transparent;
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+
+#topPart{
+    height: 140px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    border: 5px solid #576480;
+    padding:20px;
+    padding-top:0;
+    padding-right:10px;
+    border-radius: 20px;
+}
+
+#topPart ol{
+    list-style:none;
+}
+
+#score{
+    background-color: #f7f7f7;
+    color: #56526a;
+    width:180px;
+    height: 100%;
+    margin-top:10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+}
+
+#score h3{
+    color: #616bc7;
+}
+
+#score h1{
+    font-size: 4rem;
+}
+
+.line{
+    height: 10px;
+    width:150px;
+    background-color: #17223e;
+    position: relative;
+    z-index: -2;
+}
+
+.option{
+    width:150px;
+    height: 150px;
+    background-color: white;
+    border-radius:150px;
+    display:flex;
+    justify-content: center;
+    padding:20px;
+    border-top: 5px solid #bbbfd4;
+}
+
+#theTriangle{
+    display:flex;
+    width:450px;
+    flex-wrap: wrap;
+    margin-top:100px
+
+}
+
+.option::after{
+    position: absolute;
+    transform: translateY(-35px);
+    z-index: -1;
+    border-radius:180px;
+    content:'';
+    display: block;
+    width: 180px;;
+    height: 180px;
+}
+
+#rock::after{
+    background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    border-bottom: 10px solid #9f1533;
+}
+
+#paper::after{
+    background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    border-bottom: 10px solid #2a45bd;
+}
+
+#scissors::after{
+    background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    border-bottom: 10px solid #c66c1d
+}
+
+#rock{
+    margin-top:30px
+}
+
+#paperScissorsLine{
+    top:50px;
+}
+
+#rockScissorsLine{
+    transform:rotate(-45deg);
+    top:20px;
+    left:-25px;
+}
+
+#paperRockLine{
+    transform:rotate(45deg);
+    top:20px;
+    left:25px;
+}
+
+#rules{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    width:100px;
+    height: 40px;  
+    background-color: transparent;
+    border:2px solid #868aa5;
+    color: #f8fcfc;
+    font-size: 1.3rem;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#rulesBox{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    align-items:center;
+}
+
+#rulesBox main{
+    background-color: white;
+    color:#3b3e5d;
+    border-color: white;
+    width:auto;
+    padding:30px;
+    border-radius:10px;
+}
+
+#topPartOfRules{
+    display: flex;
+    justify-content:space-between;
+    width:100%;
+    margin-bottom:20px;
+}
+
+#topPartOfRules img{
+    cursor:pointer;
+}
+
+#rulesBox main h1{
+    display:inline-block;
+    width:80%;
+    height: auto;
+}
+
+#stageTwo{
+    margin-top:100px;
+    /* border: 2px solid orange; */
+    display:flex;
+    align-items: center;
+    width:460px;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    display: none;
+}
+
+#circle{ 
+    width:150px;
+    height: 150px;
+    background-color: #172240;
+    border-radius:150px;
+    display:flex;
+    justify-content: center;
+    padding:20px;
+    margin-left:150px;
+}
+
+#theHousePicked{
+    position: relative;
+    left:50px;
+}
+
+#stageTwo h1{
+    margin-bottom:30px;
+}
+
+
+.option.win::before{ 
+       position: absolute;
+    transform: translateY(-85px);
+    z-index: -2;
+    border-radius:280px;
+    content:'';
+    display: block;
+    width: 280px;;
+    height: 280px;
+    background-image: none;
+    background-color: #2b3956 !important;
+}
+
+.option.win #after::after{
+    position: relative;
+    bottom: 375px;
+    transform: translateY(290px);
+    transform: translateX(-125px);
+    z-index: -562;
+    border-radius:320px;
+    content:'';
+    display: block;
+    width: 360px;;
+    height: 360px;
+    background-image: none;
+    background-color: #223351 !important;
+}
+
+.option.win #before::before{
+    position: relative;
+    bottom:20px;
+    transform: translateY(260px);
+    transform: translateX(-145px);
+    z-index: -56407862;
+    border-radius:280px;
+    content:'';
+    display: block;
+    width: 400px;;
+    height: 400px;
+    background-image: none;
+    background-color: #223351 !important;
+}
+
+#stageTwo .option #before,
+#stageTwo .option #after,
+#stageTwo #rock img{
+    width:100%;
+    height: 100%;
+}
+
+#stageTwo .option img{
+    width:100px;
+    height: 110px;
+}
+
+.win #before,
+.win #after,
+.win img{
+    width:100%;
+    height: 100%;
+    position: relative;
+    bottom:130px;;
+}
+
+#drawMsg{
+    margin-top:60px;    
+    font-size: 2rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    display:none;
+}
+
+#drawMsg button{
+    width:50%;
+    height: 40px;
+    margin-top:30px;
+    background-color: #f9f9f9;
+    color: #48485b;
+    border:none;
+    border-radius:10px;
+    font-size: 1.1rem;
+    cursor:pointer;
+}
+
+@media(max-width:785px){
+    main{
+        width:250px;
+    }
+
+    #topPart{
+        height: auto;
+    }
+
+    #topPart h1{
+        font-size: 1.6rem;
+    }
+    
+    #score{
+        width:100px;
+    }
+
+    #score h1{
+        font-size: 2rem;
+    }
+
+    .option{
+        width:100px;
+        height: 100px;
+        padding: 10px
+    }
+
+    .option::after{
+        width:110px;
+        height: 100px;
+        transform: translateY(-20px);
+    }
+
+    #paper{
+        position: relative;
+        left:80px
+    }
+
+    #scissors{
+        position: relative;
+        /* left:20px */
+    }
+
+    #paperScissorsLine{
+        position: relative;
+        left:10px;
+    }
+
+    #stageTwo .option img{
+        width:70px;
+        height: 80px;
+        transform:translateY(-px);
+    }
+
+    #stageTwo #circle{
+        margin-left:50px;
+    }
+
+    .option.win::before{ 
+        position: absolute;
+        transform: translateY(-45px);
+        z-index: -2;
+        border-radius:140px;
+        content:'';
+        display: block;
+        width: 140px;;
+        height: 140px;
+        background-image: none;
+        background-color: #2b3956 !important;
+    }
+    
+    .option.win #after::after{
+        position: relative;
+        bottom: 115px;
+        transform: translateX(-60px);
+        z-index: -562;
+        border-radius:180px;
+        content:'';
+        display: block;
+        width: 200px;;
+        height: 200px;
+        background-image: none;
+        background-color: #273856 !important;
+        /*#223555*/
+    }
+
+    .option.win img{
+        position: relative;
+        top:20px;
+    }
+    
+    .option.win #before::before{
+        position: relative;
+        bottom:-55px;
+        transform: translateX(-80px);
+        z-index: -56407862;
+        border-radius:220px;
+        content:'';
+        display: block;
+        width: 240px;;
+        height: 240px;
+        background-image: none;
+        background-color: #223555 !important;
+    }
+
+    .option.win{
+        position: relative;
+        /* top:30px; */
+    }
+
+    #stageTwo{
+        width:100%;
+    }
+
+    #youPicked,
+    #theHousePicked{
+        font-size: 1.3rem;
+        left:0;
+    }
+
+    #theHousePicked{
+        width:100px;
+        text-align: center;
+    }
+
+    #drawMsg{
+        font-size: 1.6rem;
+    }
+
+    #stageTwo .option{
+        position: relative;
+        left:0;
+    }
+
+    #rulesBox main{
+        width:280px !important;
+    }
+
+    #rulesBox main img{
+        width:100%;
+    }
+
+    #topPartOfRules img{
+        width:40px !important;
+         
+    }
+
+}

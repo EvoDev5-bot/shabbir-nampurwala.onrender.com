@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    font:1.6rem Kalam;
+    word-spacing: 10px;
+}
+
+a{
+    color:red
+}
+
+:root{
+    /* --bg:#0F1929 */
+    --bg:transparent
+}
+
+main *{
+    grid-column: 8/11;
+}
+
+main{
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding: 120px 0px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+#mainTitle{
+    font-family: Sacramento;
+    font-size: 3.3rem;
+    font-weight: 900;
+    margin-bottom:100px;
+    color:yellow    
+}
+
+.title{
+    font: 3rem Sacramento;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color:orange;
+    letter-spacing: 10px;
+}
+
+.secondaryTitle{
+    font: 2.3rem Sacramento;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+

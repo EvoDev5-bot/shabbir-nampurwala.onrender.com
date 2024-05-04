@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <title>RPS</title>
+  <link rel="stylesheet" href="css.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main>
+    <div id="topPart">
+      <h1>
+        <ol>
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
+        </ol>
+      </h1>
+
+      <div id="score">
+        <h3>SCORE</h3>
+
+        <h1>12</h1>
+      </div>
+    </div>
+
+    
+    <div id="theTriangle">
+      <div class="option" id="paper">
+        <img src="./images/icon-paper.svg">
+      </div>
+      <div class="line" id="paperScissorsLine"></div>
+
+      <div class="option" id="scissors">
+        <img src="./images/icon-scissors.svg">
+      </div>
+      <div class="line" id="paperRockLine"></div>
+
+      <div class="option" id="rock">
+        <img src="./images/icon-rock.svg">
+      </div>
+      <div class="line" id="rockScissorsLine"></div>
+    </div>
+
+    <div id="stageTwo">
+
+      <h1 id="youPicked">YOU PICKED</h1>
+      <h1 id="theHousePicked">THE HOUSE PICKED</h1>
+
+      <div class="option" id="rock">
+        <div id="before">
+          <div id="after">
+          <img src="./images/icon-rock.svg">
+            </div>
+        </div>
+
+      </div>
+  
+      <div id="circle">
+      </div>
+
+    </div>
+
+    <div id="drawMsg">
+      <h1>ITS A DRAW</h1>
+
+      <button id="playAgain">PLAY AGAIN</button>
+    </div>
+  </main>
+
+  <button id="rules">
+    RULES
+  </button>
+
+  <div id="rulesBox">
+    <main>
+      <div id="topPartOfRules">
+      <h1>RULES</h1>
+      <img src="images/icon-close.svg">
+        </div> 
+
+
+      <img src="images/image-rules.svg" >
+    </main>
+  </div>
+
+
+  
+</body>
+
+<script src="js,.js"></script>
+</html>

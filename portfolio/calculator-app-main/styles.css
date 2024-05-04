@@ -1,0 +1,222 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height: 100vh;
+    font-size: 16px;
+    background-color: #17062a;
+    color:#fde543;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: League Spartan, sans-serif;
+}
+
+main{
+    width:500px;
+    height: auto;
+}
+
+#topBar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    font-size: 3rem;
+}
+
+#themes{
+    padding:10px;
+    display:flex;
+    align-items:center;
+}
+
+#toggle div{
+    height: 100%;
+    width:91px;
+    background-color: #1f0834;
+    margin-left:10px;
+    border-radius:100px;
+    display: flex;
+    align-items:center;
+    height: 30px;
+    cursor:pointer;
+}
+
+#toggle div::before{
+    content: '';
+    display:block;
+    width:25px;
+    height: 25px;
+    background-color: #00d9d1;
+    margin-left:2.5%;
+    border-radius:30px;
+    transform: var(--value);
+    transition: all 0.2s ease-in-out;
+}
+
+#nos{
+    display:flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#answer{
+    height: 100px;
+    width:94%;
+    margin-left:3%;
+    background-color: #1e0836;
+    border-radius: 10px;
+    font-size: 3rem;
+    line-height: 90px;
+    padding:10px;
+    text-align: right;
+}
+
+#buttons{
+    display:flex;
+    flex-wrap:wrap;
+    padding:20px;
+    margin-top: 30px;
+    background-color: #1e0836;
+    margin:20px;
+    border-radius:10px
+}
+
+#buttons button{
+    width:23%;
+    height: 50px;
+    margin:1%;
+    background-color: #331b4d;
+    color:inherit;
+    font-size: 2rem;
+    border:none;
+    border-bottom: 5px solid #7c1c93;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#buttons #reset,
+#buttons #equal{
+    width:48%;
+}
+
+#buttons #reset,
+#buttons #del{
+    background-color: #56077c;
+    color:white;
+    border-color: #aa10dd;
+    font-size: 1.3rem;
+}
+
+#buttons #equal{
+    background-color: #00decf;
+    border:none;
+    color:black
+}
+
+.bodyT2{
+    background-color: #e6e6e6;
+    color:#36352c;
+}
+
+.answerT2{
+    background-color: #eeeeee !important;
+}
+
+.noBtnsT2,
+.signBtnsT2{
+    background-color: #e5e4e0 !important;
+    border-color: #aea69a !important;
+}
+
+.delResetT2{
+    background-color: #388187 !important;
+    color:white !important;
+    border-color: #31636b !important;
+}
+
+.buttonsT2{
+    background-color: #d3cdce !important;
+}
+
+.equalT2{
+    background-color: #c85401 !important;
+    border-bottom: 5px solid #954003 !important
+}
+
+.themeSwitcherT2{
+    background-color: #d0ced0 !important;
+}
+
+.themeSwitcherT2::before{
+    color: #c85506;
+}
+
+
+
+
+
+.bodyT3{
+    background-color: #3b4664 !important;
+    color:#faf9fb !important;
+}
+
+.answerT3{
+    background-color: #181f32 !important;
+}
+
+.noBtnsT3,
+.signBtnsT3{
+    background-color: #eae3db !important;
+    border-color: #eae3db !important;
+    color: #434a5a !important
+}
+
+.delResetT3{
+    background-color: #647299 !important;
+    color:white !important;
+    border-color: #4a567c !important;
+}
+
+.buttonsT3{
+    background-color: #252d44 !important;
+}
+
+.equalT3{
+    background-color: #d13f30 !important;
+    border-bottom: 5px solid #252d44 !important
+}
+
+.themeSwitcherT3{
+    background-color: #262c45 !important;
+}
+
+.themeSwitcherT3::before{
+    color: #262c45;
+}
+
+@media(max-width:520px){
+    main{
+        width: 300px;
+    }
+
+    #buttons button{
+        font-size: 1.5rem;
+    }
+
+    #reset,
+    #del{
+        font-size: 1rem !important;
+    }
+
+    #logo{
+        font-size: 1.6rem;
+    }
+}

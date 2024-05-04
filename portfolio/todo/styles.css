@@ -1,0 +1,217 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-family: Josefin Sans, sans-serif;
+    flex-direction: column;
+}
+
+main{
+    width:600px;
+    height: auto;
+    position:absolute;
+    padding:50px;
+    margin-top:70px;
+}
+
+main #topPart{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+main #topPart img{
+    height: 60%;
+}
+
+main #topPart h1{
+    letter-spacing: 6px;
+    color:white;
+}
+
+#addListItem,
+.listItem{
+    background-color: white;
+    /* margin-top:30px; */
+    height: 60px;
+    padding:10px;
+    border-radius:18px;
+    display: flex;
+    align-items:center;
+    border-bottom:2px solid #f3f2f6;
+}
+
+#addListItemCheckbox,
+.listItemCheckbox{
+    border:2px solid #f2f1f6;
+    width:40px;
+    height: 100%;
+    border-radius:40px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-right:30px;
+    cursor: pointer;
+}
+
+ .checkImage{
+    width:65%;
+    height: 65%;
+    background-image: url(images/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.check{
+    background-image:linear-gradient(    
+    hsl(192, 100%, 67%),hsl(280, 87%, 65%)
+    )
+}
+
+#addListItem input,
+.listItem p{
+    flex-grow: 1;
+    padding:20px;
+    border:none;
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+
+#addListItem input{
+    height: 100%;
+}
+
+#itemsMenu{
+    background-color: white;
+    margin-top:10px;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px black; 
+}
+
+.checkedItem{
+    color: #e2e2e4;
+    text-decoration: line-through;
+}
+
+.crossImg{
+    display:none;
+    cursor: pointer;
+}
+
+#itemsMenuBottomBar{
+    padding:16px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#showAll,
+#showActive,
+#showCompleted{
+    background-color: transparent;
+    border:none;
+    margin-right:10px;
+    font-size: 1rem;
+    font-family: inherit;
+    color:#9597ae;
+    cursor:pointer;
+}
+
+#menu p{
+    position: relative;
+    order:1;
+}
+
+#allActiveCompletedButtons{
+    position: relative;
+    order:2;
+}
+
+#clearCompleted{
+    position: relative;
+    background-color: transparent;
+    border:none;
+    font-size: 1rem;
+    font-family: inherit;
+    color:#9597ae;
+    cursor:pointer;
+    order:3;
+}
+
+#clearCompleted:hover,
+#allActiveCompletedButtons button:hover{
+    color:black
+}
+
+.checked{
+    color:red
+}
+
+.bodyDM{
+    background-color: #181824;
+    color:white;
+}
+
+.listItemsDM{
+    background-color: #25273c !important;
+    color:white;
+    border:none !important;
+}
+
+.listItemsDM input{
+    color:inherit;
+    background-color: transparent;
+}
+
+.itemsMenuBottomBarDM{
+    background-color: #181824;
+}
+
+.allActiveCompletedButtonsDM button:hover,
+.clearCompletedDM:hover{
+    color:white !important;
+}
+
+#menu{
+    display:flex;
+    justify-content: space-between;
+}
+
+@media (max-width:610px){
+    main{
+        width:300px;
+        padding:0;
+    }
+
+    #addListItem input{
+        width:10px;
+        padding:3px;
+    }
+
+    *{
+        font-size: 0.9rem;
+    }
+
+    #allActiveCompletedButtons{
+        position: relative;
+        top:60px; 
+        display: flex; 
+        padding:10px; 
+        left:s0px;
+        justify-content: center; 
+        background-color: white; 
+        width:300px;
+        box-shadow: 5px 5px 5px black;
+        font-size: 57rem !important; 
+    }
+}
+
+
+
+
