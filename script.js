@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();
 scene.background = new THREE.TextureLoader().load(
-  "threejs-scroll-animation-demo/space.jpg"
+  "./threejs-scroll-animation-demo/space.jpg"
 );
 
 const camera = new THREE.PerspectiveCamera(
@@ -39,7 +39,7 @@ const moon = new THREE.Mesh(
   MoonGeometry,
   new THREE.MeshStandardMaterial({
     map: new THREE.TextureLoader().load(
-      "threejs-scroll-animation-demo/moon.jpg"
+      "./threejs-scroll-animation-demo/moon.jpg"
     ),
     normalMap: new THREE.TextureLoader().load(
       "threejs-scroll-animation-demo\normal.jpg"
